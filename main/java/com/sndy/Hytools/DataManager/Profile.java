@@ -35,7 +35,7 @@ public class Profile {
         }
     }
 
-    private static void loadStats(String profile) {
+    public static void loadStats(String profile) {
         try {
             HashMap<String, Player> armor = new HashMap<String, Player>();
             Type type = new TypeToken<HashMap<String, Player>>() {

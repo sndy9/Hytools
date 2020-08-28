@@ -58,8 +58,33 @@ public class PlayerAction {
         return stats.get(username).getKills() / stats.get(username).getDeaths();
     }
 
+    /**
+     * Creates a new player in the database.
+     *
+     * @param username Player being added to the database's username
+     */
     public static void createNewPlayerProfile(String username){
         Player newPlayer = new Player(0, 0, 0, 0, 0, 0, 0, 0, 0);
+        stats.put(username, newPlayer);
+    }
+
+    /**
+     * Allows to add a player and manually input values for their
+     * stats.
+     *
+     * @param username Player username
+     * @param a        Kills
+     * @param b        Deaths
+     * @param c        Cookies
+     * @param d        Chat messages
+     * @param e        Parkour wins
+     * @param f        Egg Hunt wins
+     * @param g        Playtime
+     * @param h        Fastest parkour
+     * @param i        Fastest Egg Hunt
+     */
+    public static void createNewPlayerProfile(String username, int a, int b, int c, int d, int e, int f, int g, int h, int i){
+        Player newPlayer = new Player(a, b, c, d, e, f, g, h, i);
         stats.put(username, newPlayer);
     }
 }

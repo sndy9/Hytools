@@ -24,4 +24,16 @@ class Responses {
     static void profileCreated(String arg){
         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.GREEN + "Profile \"" + EnumChatFormatting.GOLD + arg + EnumChatFormatting.GREEN + "\" created successfully."));
     }
+
+    static void invalidProfileSlashDot(String arg){
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + "Profile name \""+ arg + "\" contains '/' or '.' and " + EnumChatFormatting.RED + "is" + EnumChatFormatting.RED + " invalid."));
+    }
+
+    static void addedPlayerToProfile(String arg, String profile){
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.GREEN + "Added player \"" + EnumChatFormatting.GOLD + arg + EnumChatFormatting.GREEN + "\" to profile \"" + EnumChatFormatting.GOLD + profile + EnumChatFormatting.GREEN + "\"!"));
+    }
+
+    static void playerAlreadyInProfile(String arg, String profile){
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + "Profile \""+ profile + "\" already contains player \"" + arg + "\"."));
+    }
 }

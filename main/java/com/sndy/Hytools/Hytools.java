@@ -42,5 +42,6 @@ public class Hytools { //main controller class, searches for messages
                 }
             }
         }
+        Profile.loadStats("default");
     }
 }

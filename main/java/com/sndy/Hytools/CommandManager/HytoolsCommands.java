@@ -39,8 +39,30 @@ public class HytoolsCommands extends CommandBase {
                 }
             }
             if (args.length == 3 && args[1].toLowerCase().equals("create")) {
-                Profile.createNewProfile(args[2]);
-                Responses.profileCreated(args[2]);
+                if (!args[2].contains("/") || !args[2].contains(".")) {
+                    Profile.createNewProfile(args[2]);
+                    Responses.profileCreated(args[2]);
+                }else{
+                    Responses.invalidProfileSlashDot(args[2]);
+                }
+            }
+            if (args[1].toLowerCase().equals("players")) {
+                if (args.length == 4 && args[2].toLowerCase().equals("add")) {
+                    if (!PlayerAction.stats.containsKey(args[3])) {
+                        PlayerAction.createNewPlayerProfile(args[3]);
+                        Responses.addedPlayerToProfile(args[3], PlayerAction.profile);
+                    }else{
+                        Responses.playerAlreadyInProfile(args[3], PlayerAction.profile);
+                    }
+                }
+                if (args.length == 12 && args[2].toLowerCase().equals("add")) {
+                    if (!PlayerAction.stats.containsKey(args[3])) {
+                        PlayerAction.createNewPlayerProfile(args[3], Integer.parseInt(args[4]), Integer.parseInt(args[5]), Integer.parseInt(args[6]), Integer.parseInt(args[7]), Integer.parseInt(args[8]), Integer.parseInt(args[9]), Integer.parseInt(args[10]), Integer.parseInt(args[11]), Integer.parseInt(args[12]));
+                        Responses.addedPlayerToProfile(args[3], PlayerAction.profile);
+                    }else{
+                        Responses.playerAlreadyInProfile(args[3], PlayerAction.profile);
+                    }
+                }
             }
         }
     }
