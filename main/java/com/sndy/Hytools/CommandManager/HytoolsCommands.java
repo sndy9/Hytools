@@ -65,7 +65,7 @@ public class HytoolsCommands extends CommandBase {
                 }
             }
         }
-        else if(args[0].toLowerCase().equals("help")){
+        else if(args.length == 0 | args[0].toLowerCase().equals("help")){
             Responses.help();
         }
     }
