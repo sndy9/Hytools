@@ -7,7 +7,7 @@ import net.minecraft.util.EnumChatFormatting;
 class Responses {
 
     static void help(){
-        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "HYTOOLS Help:\n" + EnumChatFormatting.GREEN + "Profile:\n    Create: creates a profile with the specified name\n    Save: saves the profile\n    Load: loads named profile"));
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: Help: " + EnumChatFormatting.GREEN + "help message"));
     }
     static void save(String profile){
         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.GREEN + "Saved profile!"));
@@ -18,7 +18,7 @@ class Responses {
     }
 
     static void attemptingToLoadProfile(String profile){
-        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.YELLOW + "Attempting to load profile: " + EnumChatFormatting.GOLD + profile + EnumChatFormatting.YELLOW + "!"));
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.YELLOW + "Attempting to load profile: " + EnumChatFormatting.GOLD + profile + EnumChatFormatting.YELLOW + "..."));
     }
 
     static void profileLoaded(String profile){
