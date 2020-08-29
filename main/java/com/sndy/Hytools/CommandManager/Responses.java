@@ -7,7 +7,7 @@ import net.minecraft.util.EnumChatFormatting;
 class Responses {
 
     static void help(){
-        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "HYTOOLS Help:" + EnumChatFormatting.GREEN + "help message"));
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "HYTOOLS Help:\n" + EnumChatFormatting.GREEN + "Profile:\n    Create: creates a profile with the specified name\n    Save: saves the profile\n    Load: loads named profile"));
     }
     static void save(String profile){
         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.GREEN + "Saved profile!"));
