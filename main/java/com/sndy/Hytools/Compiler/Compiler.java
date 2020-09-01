@@ -1,5 +1,9 @@
 package com.sndy.Hytools.Compiler;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -21,12 +25,14 @@ public class Compiler {
                 for (int y = 0; args.length >= y; y++){
                     if (args[y].equals("ExVar;")){
                         //EXAMPLE CODE TO RUN
+                        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.GREEN + "example message"));
                     }
                 }
             }
         }
         catch (IOException exception){
             exception.printStackTrace();
+            Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + exception));
         }
         finally {
             try{
@@ -36,6 +42,7 @@ public class Compiler {
             }
             catch (IOException exception){
                 exception.printStackTrace();
+                Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + exception));
             }
         }
     }
