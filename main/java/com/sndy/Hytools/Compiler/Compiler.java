@@ -12,7 +12,8 @@ public class Compiler {
     public static void Compile(String FilePath){
         String Contents = "";
         try{
-            Contents = Files.readString(Paths.get(FilePath));
+            Files.newBufferedReader(Paths.get(FilePath));
+            Contents = "";
         }
         catch (IOException exception){
             Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + exception));
