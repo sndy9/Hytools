@@ -76,6 +76,7 @@ public class HytoolsCommands extends CommandBase {
             }
         }
         else if (args[0].toLowerCase().equals("compile")){
+            // you  get an unknown error when you open a file
             if (args.length == 2){
                 Compiler.Compile(args[1]);
             }
