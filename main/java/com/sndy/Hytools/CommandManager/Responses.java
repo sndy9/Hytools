@@ -40,4 +40,12 @@ class Responses {
     static void playerAlreadyInProfile(String arg, String profile){
         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + "Profile \""+ profile + "\" already contains player \"" + arg + "\"."));
     }
+    
+    static void NameAFile(){
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + "Name a file to compile."));
+    }
+
+    static void NotAFile(){
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + "That is not a file."));
+    }
 }

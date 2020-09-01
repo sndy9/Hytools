@@ -1,5 +1,6 @@
 package com.sndy.Hytools.CommandManager;
 
+import com.sndy.Hytools.Compiler.Compiler;
 import com.sndy.Hytools.DataManager.Profile;
 import com.sndy.Hytools.StatManager.PlayerAction;
 import net.minecraft.command.CommandBase;
@@ -72,6 +73,14 @@ public class HytoolsCommands extends CommandBase {
                         Responses.playerAlreadyInProfile(args[3], profile);
                     }
                 }
+            }
+        }
+        else if (args[0].toLowerCase().equals("compile")){
+            if (args.length == 2){
+                Compiler.Compile(args[1]);
+            }
+            else{
+                Responses.NameAFile();
             }
         }
     }
