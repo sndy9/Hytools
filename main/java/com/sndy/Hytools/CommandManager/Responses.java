@@ -48,4 +48,8 @@ class Responses {
     static void NotAFile(){
         Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.RED + "That is not a file."));
     }
+
+    static void ExVar(){
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.BLUE + "[HYTOOLS]: " + EnumChatFormatting.GREEN + "Example Message"));
+    }
 }
